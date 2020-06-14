@@ -15,3 +15,10 @@ Use cases for a depth cameras are:
 The alwaysAI API’s support Intel’s latest depth cameras from their Realsense family the D415, D435 and D435i.  All apps within this repo are built on those API’s so you will need a Realsense camera to run them.
 
 ## Repo Programs
+| Folder                     	| Description                                                                                              	|
+|----------------------------	|----------------------------------------------------------------------------------------------------------	|
+| realsenes-basics           	| Program demonstrate how to start the camera, capture and display color and depth streams from the camera 	|
+| realsense-distance-between 	| Program uses point cloud coordinates to get the distances between detected objects                         	|
+| realsense-object-detector  	| Program gets the distances from the camera to the detected objects                                        	|
+| realsense-roi              	| Program detects objects within a specified region of interest based on distance(s)                                            	|
+| object-detector            	| Standard alwaysAI object detector                                                                        	|
