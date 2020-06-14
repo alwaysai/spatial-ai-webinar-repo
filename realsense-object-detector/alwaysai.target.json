@@ -1,0 +1,7 @@
+{
+  "targetProtocol": "ssh+docker:",
+  "targetHostname": "pi@192.168.1.16",
+  "targetPath": "alwaysai/realsense-object-detector",
+  "dockerImageId": "sha256:cee7646729470cb1c446e3f77f49437fe84d9ae8e29c99c53f174d93e24a648a",
+  "targetHardware": "generic"
+}
