@@ -11,7 +11,8 @@ Use cases for a depth cameras are:
 2. Collision Avoidance - Avoid hitting objects with my robot
 3. Scene Understanding - Where are the objects and how are they moving in relation to my robot and each other
 4. Object Manipulation - Have a robot perform a task like grasp an object
-![](spatial-ai-webinar-repo/realsesne%20D400%20camera%20famliy%202.jpeg)
+![realsesne D400 camera famliy](https://user-images.githubusercontent.com/21957723/84605919-2c303a00-ae56-11ea-968b-efe608c22f28.jpeg)
+
 The alwaysAI API’s support Intel’s latest depth cameras from their Realsense family the D415, D435 and D435i.  All apps within this repo are built on those API’s so you will need a Realsense camera to run them.
 
 ## Repo Programs
