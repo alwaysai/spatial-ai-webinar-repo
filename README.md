@@ -1,9 +1,9 @@
 # spatial-ai-webinar-repo
 ![realsense](https://user-images.githubusercontent.com/21957723/84605370-8a0e5300-ae51-11ea-93e9-9c1115935662.jpeg)
 
-Spatial AI is the blending of machine learning inferencing with geometric data from sensors, enabling  robots, drones or autonomous vehicles to better understand the world around them in which they opperate.
+Spatial AI is the blending of machine learning inferencing with geometric data from sensors, enabling  robots, drones or autonomous vehicles to better understand the world around them in which they operate.
 
-This webinar will focus on particular sensor called  a depth camera which enables a developer in their programs to get distance to detected objects and distance between detected objects.  Depth Camera uses stereoscopic depth sensing to calculate distances.  Stereoscopic vision relies on two parallel cameras and the system calculates depth by estimating disparities between matching key-points in the left and right images from the cameras.
+This webinar will focus on particular sensor called  a depth camera which enables a developer in their programs to get distance to detected objects and distance between detected objects.  Depth Camera uses stereoscopic depth sensing to calculate distances.  Stereoscopic vision relies on two parallel cameras and the sensor calculates depth by estimating disparities between matching key-points in the left and right images from the cameras.
 ![](spatial-ai-webinar-repo/Screen%20Shot%202020-06-14%20at%2010.29.02%20AM%202.png)Use cases for a depth camera are:
 1. Navigation and Mapping - Where is my robot and how do I move it around
 2. Collision Avoidance - Avoid hitting objects with my robot
