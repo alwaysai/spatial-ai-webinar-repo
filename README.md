@@ -1,5 +1,5 @@
 # spatial-ai-webinar-repo
-![](spatial-ai-webinar-repo/realsense%202.jpeg)
+![realsense](https://user-images.githubusercontent.com/21957723/84605370-8a0e5300-ae51-11ea-93e9-9c1115935662.jpeg)
 
 Spatial AI is the blending of machine learning inferencing with geometric data from sensors, enabling  robots, drones or autonomous vehicles to better understand the world around them in which they opperate.
 
