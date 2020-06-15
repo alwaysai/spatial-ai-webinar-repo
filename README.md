@@ -23,3 +23,29 @@ The alwaysAI API’s support Intel’s latest depth cameras from their Realsense
 | realsense-object-detector  	| Program gets the distances from the camera to the detected objects                                        	|
 | realsense-roi              	| Program detects objects within a specified region of interest based on distance(s)                                            	|
 | object-detector            	| Standard alwaysAI object detector                                                                        	|
+## Running
+Use the alwaysAI CLI to build and start this app:
+
+Configure (once): `aai app configure`
+
+Build: `aai app deploy`
+
+Run: `aai app start`
+
+If you are using a Mac or Windows 10 PC do the following:
+
+Configure (once): `aai app configure`
+
+Build: `aai app install`
+
+Run: `aai app start`
+
+
+## Support
+Docs: https://dashboard.alwaysai.co/docs/getting_started/introduction.html
+
+Realsense API Docs: https://alwaysai.co/docs/edgeiq_api/real_sense.html
+
+Community Discord: https://discord.gg/R2uM36U
+
+Email: contact@alwaysai.co
