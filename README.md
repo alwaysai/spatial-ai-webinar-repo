@@ -24,7 +24,7 @@ The alwaysAI API’s support Intel’s latest depth cameras from their Realsense
 | realsense-roi              	| Program detects objects within a specified region of interest based on distance(s)                                            	|
 | object-detector            	| Standard alwaysAI object detector                                                                        	|
 ## Running
-Use the alwaysAI CLI to build and start this app:
+Use the alwaysAI CLI to build and start these apps on Linux PCs and Devices:
 
 Configure (once): `aai app configure`
 
