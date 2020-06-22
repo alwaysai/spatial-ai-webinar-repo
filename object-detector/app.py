@@ -36,7 +36,7 @@ def main():
             # loop detection
             while True:
                 frame = video_stream.read()
-                results = obj_detect.detect_objects(frame, confidence_level=.5)
+                results = obj_detect.detect_objects(frame, confidence_level=.6)
                 frame = edgeiq.markup_image(
                         frame, results.predictions, colors=obj_detect.colors)
 
