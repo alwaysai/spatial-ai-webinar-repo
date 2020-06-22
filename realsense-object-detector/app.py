@@ -31,7 +31,7 @@ def main():
                 depth_image, color_image = video_stream.read()
 
                 # frame = edgeiq.resize(color_image, width=416)
-                results = obj_detect.detect_objects(color_image, confidence_level=.7)
+                results = obj_detect.detect_objects(color_image, confidence_level=.6)
                 color_image = edgeiq.markup_image(
                         color_image, results.predictions, colors=obj_detect.colors)
                 for prediction in results.predictions:
