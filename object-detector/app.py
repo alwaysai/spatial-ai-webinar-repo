@@ -1,8 +1,7 @@
-import time
-import edgeiq
 """
-Use object detection to detect objects in the frame in realtime. The
-types of objects detected can be changed by selecting different models.
+Use object detection to detect objects in the frame in realtime.
+
+The types of objects detected can be changed by selecting different models.
 
 To change the computer vision model, follow this guide:
 https://dashboard.alwaysai.co/docs/application_development/changing_the_model.html
@@ -10,11 +9,15 @@ https://dashboard.alwaysai.co/docs/application_development/changing_the_model.ht
 To change the engine and accelerator, follow this guide:
 https://dashboard.alwaysai.co/docs/application_development/changing_the_engine_and_accelerator.html
 
-To install app dependencies in the runtime container, list them in the requirements.txt file.
+To install app dependencies in the runtime container, list them in the
+requirements.txt file.
 """
+import time
+import edgeiq
 
 
 def main():
+    """Run Object Detector."""
     obj_detect = edgeiq.ObjectDetection(
             "alwaysai/ssd_mobilenet_v2_coco_2018_03_29")
     obj_detect.load(engine=edgeiq.Engine.DNN)

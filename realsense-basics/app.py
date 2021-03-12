@@ -1,16 +1,18 @@
+"""
+Use RealSense camera to create a video stream and depth colormap.
+
+Objects in the depth colormap that are bluer in color are closer, and those
+objects farther away will be shifted toward the red color spectrum. This app
+requires a Intel RealSense camera to be connected on usb 3.0 port to work.
+"""
 import time
 import edgeiq
 import sys
 import numpy as np
-"""
-Use this app with the RealSense camera to create a video stream
-and depth_colormap were objects that are blue are closer,
-and those farther away will be shifted toward the red color
-spectrum
-"""
 
 
 def main():
+    """Run RealSense Camera."""
     serial_numbers = []
     text = "RealSense Camera"
 
@@ -18,27 +20,25 @@ def main():
     if not serial_numbers:
         sys.exit("Program Ending No RealSense Camera Found")
 
-
     try:
         with edgeiq.RealSense(serial_numbers[0]) as video_stream, \
                 edgeiq.Streamer() as streamer:
-                print("starting RealSense camera")
-                # let camera warm up
-                time.sleep(2.0)
+            print("starting RealSense camera")
+            # let camera warm up
+            time.sleep(2.0)
 
-                # loop over to get frames
-                while True:
-                    # Get color and depth images
-                    depth_image, color_image = video_stream.read()
+            # loop over to get frames
+            while True:
+                # Get color and depth images
+                rs_frame = video_stream.read()
 
-                    depth_colormap = video_stream.render_depth_image(depth_image)
+                combined = np.vstack((rs_frame.image,
+                                      rs_frame.render_depth_image()))
 
-                    combined = np.vstack((color_image, depth_colormap))
+                streamer.send_data(combined, text)
 
-                    streamer.send_data(combined, text)
-
-                    if streamer.check_exit():
-                        break
+                if streamer.check_exit():
+                    break
 
     finally:
         print("Closing RealSense Camera")
