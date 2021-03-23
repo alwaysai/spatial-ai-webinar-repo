@@ -1,8 +1,0 @@
-{
-  "models": {
-    "alwaysai/ssd_mobilenet_v2_coco_2018_03_29": 1
-  },
-  "scripts": {
-    "start": "python app.py"
-  }
-}
