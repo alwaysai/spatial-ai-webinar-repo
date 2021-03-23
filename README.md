@@ -29,13 +29,13 @@ The alwaysAI API's support Intel's latest depth cameras from their RealSense fam
 
 | Folder                     	| Description                                                                                              	|
 |----------------------------	|----------------------------------------------------------------------------------------------------------	|
-| realsenes-basics           	| App demonstrate how to start the camera, capture and display color and depth streams from the camera 	|
+| realsense-basics           	| App demonstrate how to start the camera, capture and display color and depth streams from the camera 	|
 | realsense-distance-between 	| App uses point cloud coordinates to get the distances between detected objects                         	|
 | realsense-object-detector  	| App gets the distances from the camera to the detected objects                                        	|
 | realsense-roi              	| App detects objects within a specified region of interest based on distance(s)                                            	|
 
 ## Usage
-RealSense Camera requires a USB 3.x connection. If you've connected to a USB
+RealSense cameras require a USB 3.x connection. If you've connected to a USB
 3.x connection and it still fails, try a different cable.
 
 Use the alwaysAI CLI to build and start these apps on your development host or
