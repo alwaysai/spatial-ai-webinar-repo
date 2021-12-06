@@ -6,9 +6,10 @@ objects farther away will be shifted toward the red color spectrum. This app
 requires a Intel RealSense camera to be connected on usb 3.0 port to work.
 """
 import time
-import edgeiq
 import sys
 import numpy as np
+import edgeiq
+from edgeiq import realsense
 
 
 def main():
@@ -16,12 +17,12 @@ def main():
     serial_numbers = []
     text = "RealSense Camera"
 
-    serial_numbers = edgeiq.enumerate_realsense_cameras()
+    serial_numbers = edgeiq.realsense.enumerate_realsense_cameras()
     if not serial_numbers:
         sys.exit("Program Ending No RealSense Camera Found")
 
     try:
-        with edgeiq.RealSense(serial_numbers[0]) as video_stream, \
+        with edgeiq.realsense.RealSense(serial_numbers[0]) as video_stream, \
                 edgeiq.Streamer() as streamer:
             print("starting RealSense camera")
             # let camera warm up

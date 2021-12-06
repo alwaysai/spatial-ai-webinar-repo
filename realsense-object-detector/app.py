@@ -1,4 +1,3 @@
-
 """
 Object Detection using Intel RealSense Cameara.
 
@@ -11,9 +10,9 @@ To change the computer vision model, the engine and accelerator,
 and add additional dependencies read this guide:
 https://alwaysai.co/docs/application_development/configuration_and_packaging.html
 """
-
-import edgeiq
 import time
+import edgeiq
+from edgeiq import realsense
 
 
 def main():
@@ -28,7 +27,7 @@ def main():
     print("Labels:\n{}\n".format(obj_detect.labels))
 
     try:
-        with edgeiq.RealSense() as video_stream, \
+        with edgeiq.realsense.RealSense() as video_stream, \
                 edgeiq.Streamer() as streamer:
 
             print("starting RealSense camera")
@@ -49,7 +48,7 @@ def main():
                         "Inference time: {:1.3f} s".format(results.duration))
                 text.append("Objects:")
 
-                for i, prediction in enumerate(results.predictions):
+                for prediction in results.predictions:
                     text.append("{}: {:2.1f}% Distance = {:2.2f}m".format(
                         prediction.label, prediction.confidence * 100,
                         rs_frame.compute_object_distance(

@@ -1,4 +1,3 @@
-
 """
 Get distances between detected objects using Intel RealSense Cameara.
 
@@ -14,8 +13,9 @@ and add additional dependencies read this guide:
 https://alwaysai.co/docs/application_development/configuration_and_packaging.html
 """
 import time
-import edgeiq
 import cv2
+import edgeiq
+from edgeiq import realsense
 
 
 def midpoint(pointA, pointB):
@@ -35,7 +35,7 @@ def main():
     print("Labels:\n{}\n".format(obj_detect.labels))
 
     try:
-        with edgeiq.RealSense() as video_stream, \
+        with edgeiq.realsense.RealSense() as video_stream, \
                 edgeiq.Streamer() as streamer:
             print("Starting RealSense camera")
             time.sleep(2.0)
