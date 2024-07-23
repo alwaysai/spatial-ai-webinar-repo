@@ -20,7 +20,7 @@ that region.
 
 To change the computer vision model, the engine and accelerator,
 and add additional dependencies read this guide:
-https://alwaysai.co/docs/application_development/configuration_and_packaging.html
+https://docs.alwaysai.co/application_development/application_configuration.html
 """
 import time
 import edgeiq
